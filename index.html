@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GUI</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="input">
+        <label for="stroke">Stroke</label><br>
+        <input type="number" id="stroke" placeholder="[mm]"><br>
+
+        <label for="angle">Angle</label><br>
+        <input type="number" id="angle" placeholder="[deg]"><br>
+
+        <label for="system-type">System type</label>
+        <select id="system-type">
+            <option value="single rail">Single rail system</option>
+            <option value="double rail">Double rail system</option>
+        </select>
+
+        <label for="pulling-side">Window position</label>
+        <select id="pulling-side">
+            <option value="A">Pulling side A</option>
+            <option value="B">Pulling side B</option>
+        </select>
+        
+        <label for="window-position">Window position</label>
+        <select id="window-position">
+            <option value="front">Front window</option>
+            <option value="rear">Rear window</option>
+        </select>
+
+        <label for="show-window">Show the window</label>
+        <input type="checkbox" id="show-window">
+    </div>
+
+    <div class="canvas">
+        <canvas class="canvas1" id="canvas1"></canvas>
+        <canvas class="canvas2" id="canvas2"></canvas>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="400" value="0" class="slider" id="strokeRange">
+            <div class="slider_value">Stroke: <span id="strokeOutput"></span></div>
+        </div>
+    </div>
+
+    <script src="constructor.js"></script>
+    <script src="system.js"></script>
+    <script src="canvas.js"></script>
+    <script src="input-data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
